@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <math.h>
 
-int bin_p_decTR(int x, int aux,int parcial)
+int bin_p_decTR(int x, int parcial,int aux)
 {
-	if (x/2==0) return parcial;
-	return bin_p_decTR(x/2,aux++,parcial+x%2*pow(10,aux));
+	if (x==0) return parcial;
+	return bin_p_decTR(x/10,parcial+(x%2)*pow(2,aux),++aux);
 }
 
 int bin_p_dec(int x)
 {
-	return bin_p_decTR(x,0,0);
+	return bin_p_decTR(x,0,-1);
 }
 
 int dec_p_binTR(int x, int parcial, int aux)

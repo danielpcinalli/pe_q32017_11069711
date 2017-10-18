@@ -19,8 +19,8 @@ int main()
 	int n=1;
 	fibMem[1]=1;
 	fibMem[2]=1;
-
-	scanf("%d", &n);
-	printf("%d\n",fib(n));
-
+	while (n){
+		scanf("%d", &n);
+		printf("%d\n",fib(n));
+	}
 }
