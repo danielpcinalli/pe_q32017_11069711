@@ -3,14 +3,17 @@
 
 void printaRepetidos(int *v,int *nums, int n, int m)
 {
+	printf("%d\n",m);
 	int repeticao;
 	for(int i=0;i<m;i++){
 		repeticao=0;
 		for(int j=0;j<n;j++){
 			if(nums[i]==v[j]) repeticao++;
 		}
-		if (repeticao>1) printf("%d-%d",nums[i],repeticao);
-		if(i<m-2) printf(" ");//para evitar espacos apos resposta
+		if (repeticao>1){
+			printf("%d-%d",nums[i],repeticao);
+			if(i<m-1) printf(" ");
+		}//para evitar espacos apos resposta
 	}
 	printf("\n");
 }
